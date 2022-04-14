@@ -6,7 +6,7 @@ const clock=()=>{
     let second=time.getSeconds();
     let hours=document.getElementsByClassName("hour");
     let minutes=document.getElementsByClassName("minute");
-    let seconds=document.getElementsByClassName("second");
+    let seconds=document.getElementsByClassName("seconds");
     let am_pm=document.getElementsByClassName("am_pm");
     
     if(hour>12){
