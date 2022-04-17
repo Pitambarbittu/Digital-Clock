@@ -1,21 +1,16 @@
 const clock=()=>{
     let time= new Date();
-    let amorpm="";
+    // let amorpm="PM";
     let hour=time.getHours();
     let minute=time.getMinutes();
     let second=time.getSeconds();
     let hours=document.getElementsByClassName("hour");
     let minutes=document.getElementsByClassName("minute");
-    let seconds=document.getElementsByClassName("seconds");
+    let seconds=document.getElementsByClassName("second");
     let am_pm=document.getElementsByClassName("am_pm");
     
-    if(hour>12){
-        hour=hour-12;
-        amorpm="PM";
-    }
-    if(hour==0){
-        hour=12;
-        amorpm="AM";
+    if(hour>12){        
+        hour=hour-12;        
     }
     if(hour<10){
         hour="0"+hour;
@@ -26,10 +21,18 @@ const clock=()=>{
     if(second<10){
         second="0"+second;
     }
+
+    if(hour=>12){
+        console.log("----------------------12---am/pm----------"+am_pm[0]);
+        am_pm[0].innerText="PM";
+    }
+    if(hour==0){
+        hour=12;
+    }
     hours[0].innerText=hour;
     minutes[0].innerText=minute;
     seconds[0].innerText=second;
-    am_pm[0].innerText=amorpm;
+    
     }
     
         const setAlarm=()=>{
